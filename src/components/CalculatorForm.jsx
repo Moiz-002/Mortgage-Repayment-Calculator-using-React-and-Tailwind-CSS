@@ -257,7 +257,12 @@ const CalculatorForm = () => {
 
           <label
             htmlFor="repaymentType"
-            className="border-2 rounded-lg p-3 flex gap-3 font-bold text-slate-900 hover:border-[hsl(61,74%,74%)] cursor-pointer"
+            className={`border-2 rounded-lg p-3 flex gap-3 font-bold text-slate-900 active:bg-[hsl(61,87%,91%)] hover:border-[hsl(61,74%,74%)] cursor-pointer
+  ${
+    mortgageType === "repayment"
+      ? "bg-[hsl(61,87%,91%)] border-[hsl(61,74%,74%)]"
+      : "border-slate-500"
+  }`}
           >
             <input
               id="repaymentType"
@@ -273,7 +278,14 @@ const CalculatorForm = () => {
 
           <label
             htmlFor="interestOnlyType"
-            className="border-2 rounded-lg p-3 flex gap-3 font-bold text-slate-900 hover:border-[hsl(61,74%,74%)] cursor-pointer"
+            className={`border-2 rounded-lg p-3 flex gap-3 font-bold text-slate-900 
+    active:bg-[hsl(61,87%,91%)] hover:border-[hsl(61,74%,74%)] cursor-pointer
+    ${
+      mortgageType === "interestOnly"
+        ? "bg-[hsl(61,87%,91%)] border-[hsl(61,74%,74%)]"
+        : "border-slate-500"
+    }
+  `}
           >
             <input
               id="interestOnlyType"
